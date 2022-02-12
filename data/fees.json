@@ -1,8 +1,24 @@
 {
     "fees": [
-        {"tier": "Free Tier","price": "$0"},
-        {"tier": "Academic Tier", "price": "$14.99"},
-        {"tier": "Personal Tier", "price": "$50"},
-        {"tier": "Industrial Tier", "price": "$70"}
+        {
+            "id": 0,
+            "tier": "Free Tier",
+            "price": "$0"
+        },
+        {
+            "id": 1,
+            "tier": "Academic Tier",
+            "price": "$14.99"
+        },
+        {
+            "id": 2,
+            "tier": "Personal Tier",
+            "price": "$50"
+        },
+        {
+            "id": 3,
+            "tier": "Industrial Tier",
+            "price": "$70"
+        }
     ]
 }

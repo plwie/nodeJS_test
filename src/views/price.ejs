@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +22,7 @@
   <link rel="stylesheet" href="../assets/css/theme.css">
 
 </head>
+
 <body>
 
   <!-- Back to top button -->
@@ -31,7 +33,8 @@
       <div class="container">
         <a href="index.html" class="navbar-brand">Digi<span class="text-primary">Gram.</span></a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -60,54 +63,59 @@
         </div>
       </div>
     </nav>
-      <div class="page-banner home-banner">
-        <div class="container h-100">
-          <div class="row align-items-center h-100">
-            <div class="col-lg-6 py-3 wow fadeInUp">
-              <h1 class="mb-4">
-                <% fees.map((prices) => { %>
-                <h4><%=prices.tier %></h4>
-              <p><%=prices.price%></p>
-            <%})%>
-              </h1>
-              <p class="text-lg mb-5">Ignite the most powerfull growth engine you have ever built for your company</p>
+    <div class="page-banner home-banner">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <h1 class="mb-4">
+              <% fees.map((prices)=> { %>
+                <h4>
+                  <a href= "../fees/<%=prices.id%>"><%=prices.tier %></a>
+                </h4>
+                <p>
+                  <%=prices.price %>
+                </p>
+                <%})%>
+            </h1>
+            <p class="text-lg mb-5">Ignite the most powerfull growth engine you have ever built for your company</p>
 
-              <a href="#" class="btn btn-outline border text-secondary">More Info</a>
-              <a href="#" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
-            </div>
-            <div class="col-lg-6 py-3 wow zoomIn">
-              <div class="img-place">
-                <img src="../assets/img/bg_image_1.png" alt="">
-              </div>
+            <a href="#" class="btn btn-outline border text-secondary">More Info</a>
+            <a href="#" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span
+                  class="mai-play"></span></div></a>
+          </div>
+          <div class="col-lg-6 py-3 wow zoomIn">
+            <div class="img-place">
+              <img src="../assets/img/bg_image_1.png" alt="">
             </div>
           </div>
         </div>
       </div>
-    </header>
-    
-  
-    
-    <div class="page-section client-section">
-      <div class="container-fluid">
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
-          <div class="item wow zoomIn">
-            <img src="../assets/img/clients/airbnb.png" alt="">
-          </div>
-          <div class="item wow zoomIn">
-            <img src="../assets/img/clients/google.png" alt="">
-          </div>
-          <div class="item wow zoomIn">
-            <img src="../assets/img/clients/stripe.png" alt="">
-          </div>
-          <div class="item wow zoomIn">
-            <img src="../assets/img/clients/paypal.png" alt="">
-          </div>
-          <div class="item wow zoomIn">
-            <img src="../assets/img/clients/mailchimp.png" alt="">
-          </div>
+    </div>
+  </header>
+
+
+
+  <div class="page-section client-section">
+    <div class="container-fluid">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center">
+        <div class="item wow zoomIn">
+          <img src="../assets/img/clients/airbnb.png" alt="">
         </div>
-      </div> <!-- .container-fluid -->
-    </div> <!-- .page-section -->
+        <div class="item wow zoomIn">
+          <img src="../assets/img/clients/google.png" alt="">
+        </div>
+        <div class="item wow zoomIn">
+          <img src="../assets/img/clients/stripe.png" alt="">
+        </div>
+        <div class="item wow zoomIn">
+          <img src="../assets/img/clients/paypal.png" alt="">
+        </div>
+        <div class="item wow zoomIn">
+          <img src="../assets/img/clients/mailchimp.png" alt="">
+        </div>
+      </div>
+    </div> <!-- .container-fluid -->
+  </div> <!-- .page-section -->
   </main>
 
   <footer class="page-footer">
@@ -117,7 +125,7 @@
           <h3>Digi<span class="text-primary">Gram.</span></h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
-          <p><a href="#" >digigram@mail.com</a></p>
+          <p><a href="#">digigram@mail.com</a></p>
           <p><a href="#">+00 1122 3344 5566</a></p>
         </div>
         <div class="col-lg-3 py-3">
@@ -190,4 +198,5 @@
 
 
 </body>
+
 </html>
