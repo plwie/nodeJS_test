@@ -1,0 +1,8 @@
+{
+    "fees": [
+        {"tier": "Free Tier","price": "$0"},
+        {"tier": "Academic Tier", "price": "$14.99"},
+        {"tier": "Personal Tier", "price": "$50"},
+        {"tier": "Industrial Tier", "price": "$70"}
+    ]
+}
