@@ -17,10 +17,20 @@ app.set("view engine", "ejs");
 
 priceRouter.route("/").get((req, res) => {
     res.render("price",
-        fees);
-})
+        {fees,});
+});
+
+priceRouter.route("/:id").get((req, res) => {
+    const id = req.params.id
+    res.render("tier",
+    {
+        prices: fees[id]
+    })
+});
+
 
 app.use("/prices", priceRouter)
+
 app.get("/", (req, res) => {
     res.render('index', { username: "inwza" });
 });
