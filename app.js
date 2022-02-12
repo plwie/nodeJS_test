@@ -3,33 +3,20 @@ const path = require('path');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const chalk = require('chalk');
-const fees = require("./data/fees.json");
-const priceRouter = express.Router()
+
 
 const app = express();
 const Port = process.env.Port;
+const tierRouter = require("./src/router/tierRouter")
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, "/public/")));
 
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
+ 
 
-priceRouter.route("/").get((req, res) => {
-    res.render("price",
-        {fees,});
-});
-
-priceRouter.route("/:id").get((req, res) => {
-    const id = req.params.id
-    res.render("tier",
-    {
-        prices: fees[id]
-    })
-});
-
-
-app.use("/prices", priceRouter)
+app.use("/prices", tierRouter)
 
 app.get("/", (req, res) => {
     res.render('index', { username: "inwza" });
